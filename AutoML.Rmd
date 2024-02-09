@@ -348,8 +348,7 @@ summary(FEfit_2008)
 ```
 
 Your answer:
-I think add log to all of the predictors is a kind of feature selection. I think this will
-help with the prediction.
+I think add log to all of the predictors is a kind of feature engineering. I think this will help with the prediction.
 
 ~~~
 Please write your answer in full sentences.
