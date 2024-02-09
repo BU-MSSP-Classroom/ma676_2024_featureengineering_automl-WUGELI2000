@@ -328,8 +328,8 @@ You will use the framework of tidymodel workflow, which will run these transform
 
 Since you've worked on it in MA679 please copy and paste your best model here.  
 ```{r,echo=TRUE}
-##
-##
+lmfit_2008 <- lm(formula = SalePrice ~ `Gr Liv Area` + `Year Built` + `Lot Area`, ames_raw_2008)
+summary(lmfit_2008)
 ```
 
 Your answer:
@@ -343,11 +343,13 @@ Please write your answer in full sentences.
 Please perform feature engineering on the Ames housing data that you think will help with the prediction.
 
 ```{r,echo=TRUE}
-##
-##
+FEfit_2008 <- lm(formula = log(SalePrice) ~ log(`Gr Liv Area`) + log(`Year Built`) + log(`Lot Area`), ames_raw_2008)
+summary(FEfit_2008)
 ```
 
 Your answer:
+I think add log to all of the predictors is a kind of feature selection. I think this will
+help with the prediction.
 
 ~~~
 Please write your answer in full sentences.
@@ -364,6 +366,7 @@ Compare the result before and after the feature engineering step.
 
 
 Your answer:
+After feature engineering, the standard error become smaller and the p-value become smaller means that the model after feature engineering is more significant.
 
 ~~~
 Please write your answer in full sentences.
